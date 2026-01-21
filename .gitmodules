@@ -1,0 +1,3 @@
+[submodule "tree-sitter-qat"]
+	path = tree-sitter-qat
+	url = https://github.com/qatlang/tree-sitter-qat
