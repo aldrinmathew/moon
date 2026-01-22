@@ -54,7 +54,7 @@ fn main() {
         let css = CssProvider::new();
         css.load_from_data(
             "#text_field {
-            background-color: #242a2f;
+            background-color: #222528;
             font-size: 14pt;
             line-height: 1.5;
             font-family: 'Agave Nerd Font';
