@@ -1,0 +1,164 @@
+:root {
+  --bg: #222528;
+  --size: 14pt;
+}
+
+* {
+  font-family: "Agave Nerd Font";
+  color: #deefff;
+}
+
+window.background {
+  background-color: transparent;
+  background-image: none;
+}
+
+window {
+  transition: opacity 0.2s ease;
+}
+
+.inactive_window {
+  opacity: 0.7;
+}
+
+#text_field {
+  background-color: var(--bg);
+  font-size: var(--size);
+  line-height: 1.5;
+}
+
+line_number {
+  font-size: var(--size);
+  line-height: 1.5;
+  padding-left: 15px;
+  padding-right: 5px;
+  background-color: #303030;
+  border: 2px solid #555555;
+  color: #777777;
+}
+
+textview {
+  caret-color: #ffffff;
+}
+
+title_bar {
+  padding-top: 12px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: var(--bg);
+  border-bottom: 2px solid #ffffff44;
+}
+
+#close_button {
+  background-color: #d84646;
+  font-size: 20pt;
+  border-radius: 8px;
+  color: black;
+  transition: background-color 0.15s ease;
+}
+
+#close_button:hover {
+  background-color: #912f2f;
+}
+
+#minimize_button {
+  background-color: #ffb293;
+  font-size: 20pt;
+  border-radius: 8px;
+  color: black;
+  transition: background-color 0.15s ease;
+}
+
+#minimize_button:hover {
+  background-color: #a4725e;
+}
+
+#maximize_button {
+  background-color: #b29bff;
+  font-size: 20pt;
+  border-radius: 8px;
+  color: black;
+  transition: background-color 0.2s ease;
+}
+
+#maximize_button:hover {
+  background-color: #7363a5;
+}
+
+save_window_current_path_separator {
+  font-size: 16pt;
+  color: #ffffff55;
+}
+
+file_explorer {
+  border: 2px solid #ffffff33;
+  border-radius: 10px;
+  background-color: var(--bg);
+}
+
+explorer_content {
+  padding: 10px;
+}
+
+file_explorer_title_bar {
+  padding-top: 12px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: var(--bg);
+  border-bottom: 2px solid #ffffff33;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+content_list {
+  background-color: #00000055;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffffff33;
+}
+
+save_window_current_path {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #00000055;
+  border: 1px solid #ffffff33;
+}
+
+save_window_current_path_unit {
+  background-color: #7da0ff;
+  border-radius: 7px;
+  color: black;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.save_window_selected_directory_entry {
+  background-color: #ffffff44;
+  border: 2px solid #ffffff55;
+  text-align: left;
+  font-size: 14pt;
+  border-radius: 7px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: background-color 0.3s ease;
+}
+.save_window_directory_entry {
+  border: 2px solid transparent;
+  border-radius: 7px;
+  font-size: 14pt;
+  text-align: left;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: background-color 0.3s ease;
+}
+
