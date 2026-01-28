@@ -4,10 +4,12 @@ use gtk4::{
     TextBuffer,
     prelude::{TextBufferExt, TextBufferExtManual},
 };
-use tree_sitter::Parser;
+use tree_sitter::{Language, Parser};
 use unicode_segmentation::UnicodeSegmentation;
 
-use crate::tree_sitter_qat;
+unsafe extern "C" {
+    fn tree_sitter_qat() -> Language;
+}
 
 pub fn setup_highlighting_for_qat(buffer: Arc<TextBuffer>) {
     let tag_keyword = buffer
@@ -443,23 +445,7 @@ pub fn setup_highlighting_for_qat(buffer: Arc<TextBuffer>) {
                                 } else {
                                     buf.apply_tag(tag_function, &start, &end);
                                 }
-                            } else {
-                                println!(
-                                    "Function call {} child is {}",
-                                    &content[child.byte_range().start..child.byte_range().end],
-                                    child.kind()
-                                );
                             }
-                        }
-                        "constructor_call" => {
-                            let child = node
-                                .child(0)
-                                .expect("Could not get child of constructor call");
-                            println!(
-                                "Child of constructor call {} is {}",
-                                &content[node.byte_range().start..node.byte_range().end],
-                                child.kind()
-                            );
                         }
                         "mix_initialiser" | "choice_initialiser" => {
                             let name_field = node.child_by_field_name("name").expect(
